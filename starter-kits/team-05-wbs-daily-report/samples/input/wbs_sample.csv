@@ -1,0 +1,8 @@
+task_id,task_name,owner,start_date,due_date,status,progress,deliverable
+T-001,Define demo scope,PM,2026-08-01,2026-08-05,Done,100,scope.md
+T-002,Prepare dummy data,Data Owner,2026-08-03,2026-08-07,In Progress,70,dummy-data.csv
+T-003,Build core workflow,Builder,2026-08-05,2026-08-12,In Progress,40,prototype
+T-004,Run edge tests,Verifier,2026-08-10,2026-08-15,Not Started,0,test-log.md
+T-005,Resolve access question,,2026-08-02,2026-08-04,Blocked,20,decision.md
+T-006,Prepare demo,Owner,2026-08-14,2026-08-18,Not Started,0,demo-script.md
+

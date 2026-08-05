@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Demo Retail Tech, logistics prototype announced",
+    "publisher": "Demo Newswire",
+    "url": "https://example.com/news/demo-retail-tech-01",
+    "published_at": "2026-08-04T09:00:00+09:00",
+    "collected_at": "2026-08-05T08:00:00+09:00",
+    "summary": "Public demo article about a logistics technology prototype."
+  },
+  {
+    "title": "Demo Retail Tech announces logistics prototype",
+    "publisher": "Sample Daily",
+    "url": "https://example.org/articles/demo-retail-tech",
+    "published_at": "2026-08-04T10:30:00+09:00",
+    "collected_at": "2026-08-05T08:00:00+09:00",
+    "summary": "A second public demo article describing the same prototype announcement."
+  }
+]
+

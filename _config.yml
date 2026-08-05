@@ -1,0 +1,78 @@
+title: Shinsegae Harness
+description: 신세계 I&C AI4PM 5개 팀을 위한 Claude Code 하네스 제작·검증 작업실
+remote_theme: just-the-docs/just-the-docs
+
+url: "https://magicecoleai.github.io"
+baseurl: "/shinsegae-harness"
+
+lang: ko-KR
+search_enabled: true
+search:
+  heading_level: 3
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s\-/]+/
+  rel_url: true
+  button: false
+
+color_scheme: shinsegae
+enable_copy_code_button: true
+nav_sort: case_insensitive
+heading_anchors: true
+
+footer_content: "Shinsegae Harness · 신세계 I&C AI4PM 실습용 공개 보조자료 · 실제 업무 적용 전 담당자의 검토와 승인이 필요합니다."
+last_edit_timestamp: true
+last_edit_time_format: "%Y-%m-%d"
+gh_edit_link: false
+
+aux_links:
+  "Starter Kit":
+    - "/shinsegae-harness/assets/downloads/shinsegae-harness-starter-kits.zip"
+  "GitHub":
+    - "https://github.com/MagicecoleAI/shinsegae-harness"
+aux_links_new_tab: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - scripts
+
+callouts_level: quiet
+callouts:
+  warning:
+    title: 주의
+    color: red
+  tip:
+    title: 바로 해보기
+    color: green
+  note:
+    title: 참고
+    color: purple
+  important:
+    title: 완료 기준
+    color: yellow
+  safe:
+    title: 안전 원칙
+    color: blue
