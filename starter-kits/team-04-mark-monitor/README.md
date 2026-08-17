@@ -2,6 +2,10 @@
 
 저장된 공개 뉴스·공시·가격 Snapshot을 정리해 출처와 기준시각이 있는 Brief를 만드는 시작 폴더입니다.
 
+## Miniapp Lab
+
+Claude Code로 화면을 만들 때는 [`miniapp-mission.md`](./miniapp-mission.md)를 먼저 읽고, 공개 사이트의 공통 Playbook과 4조 Prompt를 사용합니다.
+
 ## 5단계 시작
 
 1. `CLAUDE.md`와 역할 파일을 읽습니다.
@@ -11,4 +15,3 @@
 5. 중복·상충·오래된 자료·Source 실패·투자 요청 Test를 실행합니다.
 
 공식 API·RSS·저장 Snapshot 우선입니다. 로그인 우회, 무단 수집, 자동 발송, 투자·매매 추천은 하지 않습니다.
-

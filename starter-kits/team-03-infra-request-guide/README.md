@@ -2,6 +2,10 @@
 
 승인된 더미 IDC·AWS 가이드에서 근거를 찾아 안내와 JSM 요청서 초안을 만드는 시작 폴더입니다.
 
+## Miniapp Lab
+
+Claude Code로 화면을 만들 때는 [`miniapp-mission.md`](./miniapp-mission.md)를 먼저 읽고, 공개 사이트의 공통 Playbook과 3조 Prompt를 사용합니다.
+
 ## 5단계 시작
 
 1. `CLAUDE.md`와 `.claude/agents/`를 읽습니다.
@@ -11,4 +15,3 @@
 5. 근거 없음·정책 충돌·금지 요청을 포함한 Test 10개를 실행합니다.
 
 실제 JSM 등록, 운영 명령, 인프라 변경, 보안 승인은 하지 않습니다.
-

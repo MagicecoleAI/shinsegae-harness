@@ -13,6 +13,7 @@ Claude Code를 열기 전에 **자료, 범위, 역할, 안전 기준**부터 확
 - [ ] 팀별 Claude Code Max 20x 지정 사용자가 로그인했다.
 - [ ] 세 명의 역할을 Owner·Builder·Verifier로 나눴다.
 - [ ] 2주차 v2.0 문서와 1주차 Wiki를 열 수 있다.
+- [ ] 우리 팀 GitBook 페이지와 Starter의 `miniapp-mission.md`를 열 수 있다.
 - [ ] 공개·더미·비식별 Sample Input 1개가 있다.
 - [ ] 사람이 보고 승인할 Expected Output 1개가 있다.
 - [ ] 오늘 만들 기능과 만들지 않을 기능이 한 문장씩 적혀 있다.
@@ -73,5 +74,8 @@ README, CLAUDE.md, samples/input, samples/expected, tests를 먼저 읽어주세
 UI, 외부 API, 자동 발송은 Silver 통과 전 계획에 넣지 마세요.
 ```
 
-[하네스 기본 구조로 →]({{ site.baseurl }}/01-harness-basics/)
+첫 요청 뒤 바로 구현하지 않습니다. Claude의 계획에서 외부연결·복잡한 UI·여러 Agent를 삭제하고, `한 입력→한 결과→한 사람 확인`만 남깁니다.
 
+상세한 읽기·계획·구현·실행·오류수정·검증 Prompt는 [Claude Code 미니앱 제작 Playbook]({{ site.baseurl }}/02-common-lab/)에서 복사할 수 있습니다.
+
+[하네스 기본 구조로 →]({{ site.baseurl }}/01-harness-basics/) · [미니앱 제작 절차로 →]({{ site.baseurl }}/02-common-lab/)

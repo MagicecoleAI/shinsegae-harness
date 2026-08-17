@@ -7,9 +7,10 @@ permalink: /
 <div class="hero-panel">
   <span class="eyebrow">Shinsegae I&amp;C · AI4PM Field Guide</span>
   <h1>Shinsegae<br>Harness</h1>
-  <p>아이디어를 크게 설명하는 대신, 고정된 더미 입력 하나로 작동 결과를 만들고 사람이 검토할 수 있게 만드는 8시간 실전 작업실입니다.</p>
+  <p>GitBook의 팀별 업무설명을 Claude Code가 읽게 하고, 더미 Sample로 미니앱을 직접 만들고 실패·수정한 뒤 실제 Agent 주제와 결과물을 결정하는 실전 작업실입니다.</p>
   <div class="hero-actions">
     <a class="btn btn-primary" href="{{ site.baseurl }}/00-start-here/">시작 준비</a>
+    <a class="btn" href="{{ site.baseurl }}/02-common-lab/">Claude Code 미니앱 만들기</a>
     <a class="btn" href="{{ site.baseurl }}/03-team-harnesses/">우리 팀 하네스 선택</a>
     <a class="btn" href="{{ site.baseurl }}/assets/downloads/shinsegae-harness-starter-kits.zip">Starter Kit 받기</a>
   </div>
@@ -67,21 +68,22 @@ AI가 무엇을 해야 하는지만 적으면 결과가 매번 흔들립니다. 
   </article>
 </div>
 
-## 오늘의 성공 순서
+## 8월 21일의 성공 순서
 
 <div class="stage-strip">
-  <div class="stage"><strong>Bronze · 12:00</strong>입력 1개에서 핵심 결과파일 1개를 만든다.</div>
-  <div class="stage"><strong>Silver · 14:35</strong>근거·오류·사람 확인 위치를 결과에 연결한다.</div>
-  <div class="stage"><strong>Gold · 17:00</strong>테스트 10개, Fallback, README, 데모를 갖춘다.</div>
+  <div class="stage"><strong>09:00 · Live Demo</strong>강사의 실제 Claude Code 읽기·계획·변경·실행·오류수정을 본다.</div>
+  <div class="stage"><strong>10:00 · 팀 샘플</strong>5개 팀이 각자의 GitBook·Starter로 유사 미니앱을 만들고 시행착오를 기록한다.</div>
+  <div class="stage"><strong>13:00 · 실제 Agent</strong>샘플과 실제 업무의 차이를 분석해 8월 28일 Agent 주제와 변경점을 정한다.</div>
+  <div class="stage"><strong>17:00 · 팀 약속</strong>결과물·Demo·시험·담당·일정·완료증거를 팀 이름으로 약속한다.</div>
 </div>
 
 ## 먼저 할 일
 
 1. [시작 준비]({{ site.baseurl }}/00-start-here/)에서 데이터·계정·역할을 확인합니다.
-2. [우리 팀 하네스]({{ site.baseurl }}/03-team-harnesses/)에서 범위와 Starter Kit을 확인합니다.
-3. [8시간 Build Day]({{ site.baseurl }}/04-build-day/)의 시간표대로 Bronze부터 만듭니다.
-4. [평가와 발표]({{ site.baseurl }}/05-evaluation/)에서 테스트·3분 데모·4주차 Backlog를 준비합니다.
+2. [Claude Code 미니앱 Playbook]({{ site.baseurl }}/02-common-lab/)에서 읽기·계획·구현·오류수정 Prompt를 확인합니다.
+3. [우리 팀 하네스]({{ site.baseurl }}/03-team-harnesses/)에서 팀별 GitBook·Starter·변경미션을 확인합니다.
+4. [8시간 수업 Runbook]({{ site.baseurl }}/04-build-day/)으로 오전 샘플과 오후 Agent 주제결정을 연결합니다.
+5. [평가와 발표]({{ site.baseurl }}/05-evaluation/)에서 팀 발표와 8월 28일 완료약속을 준비합니다.
 
 {: .safe }
 > Claude Code에는 공개·더미·비식별 자료만 넣습니다. 실제 고객정보, 실제 손익, 계약·영업기밀, 운영 로그, 접근키는 사용하지 않습니다. AI가 만든 결과는 담당자가 확인하기 전까지 초안입니다.
-
