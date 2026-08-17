@@ -59,7 +59,16 @@ const requiredSections = [
   "## 추천 폴더",
   "## 테스트 10개",
   "## 시작 프롬프트",
-  "## 실패와 Fallback"
+  "## 실패와 Fallback",
+  "## 80분 샘플 미니앱 실습",
+  "### 1. Claude에게 먼저 읽히기",
+  "### 2. 미니앱 계획",
+  "### 3. 구현 요청",
+  "### 팀별 변경미션",
+  "### 4. 실행·오류수정",
+  "### 5. 검증·회고",
+  "### 완료증거",
+  "### Fallback"
 ];
 
 for (const file of teamPages) {
@@ -84,6 +93,7 @@ for (const [team, skill] of teams) {
   const expected = [
     "README.md",
     "CLAUDE.md",
+    "miniapp-mission.md",
     path.join(".claude", "skills", skill, "SKILL.md"),
     path.join("tests", "eval-cases.md"),
     path.join("outputs", "README.md")
@@ -99,6 +109,42 @@ for (const [team, skill] of teams) {
   const evalBody = fs.readFileSync(path.join(base, "tests", "eval-cases.md"), "utf8");
   const testCount = (evalBody.match(/\| T-\d{2} \|/g) ?? []).length;
   if (testCount !== 10) fail(`${team} expected 10 eval rows, found ${testCount}`);
+  const readmeBody = fs.readFileSync(path.join(base, "README.md"), "utf8");
+  if (!readmeBody.includes("miniapp-mission.md")) fail(`${team} README does not link miniapp-mission.md`);
+  const missionBody = fs.readFileSync(path.join(base, "miniapp-mission.md"), "utf8");
+  for (const section of ["## 목표", "## 최소 화면", "## 변경미션", "## 하지 않을 것", "## 완료증거"]) {
+    if (!missionBody.includes(section)) fail(`${team}/miniapp-mission.md missing ${section}`);
+  }
+}
+
+const commonLab = fs.readFileSync(path.join(root, "02-common-lab", "index.md"), "utf8");
+const commonLabSections = [
+  "## 1. 시작 전 준비",
+  "## 3. 80분 미니앱 실행순서",
+  "## 4. Prompt 1 — 수정하지 말고 먼저 읽기",
+  "## 5. Prompt 2 — 미니앱 작업계획 만들기",
+  "## 6. Prompt 3 — 범위를 강제로 줄이기",
+  "## 7. Prompt 4 — 첫 미니앱 구현",
+  "## 8. Prompt 5 — 실행결과 확인하기",
+  "## 9. Prompt 6 — 오류를 작게 수정하기",
+  "## 10. Prompt 7 — 독립 검증하기",
+  "## 11. Prompt 8 — 막혔을 때 범위축소·Fallback",
+  "## 12. Prompt 9 — 회고와 실제 프로젝트 연결",
+  "## 13. Prompt 10 — 세션 종료·인수인계"
+];
+for (const section of commonLabSections) {
+  if (!commonLab.includes(section)) fail(`02-common-lab/index.md missing ${section}`);
+}
+
+for (const [file, phrase] of [
+  ["index.md", "Claude Code 미니앱 만들기"],
+  ["00-start-here/index.md", "미니앱 제작 절차"],
+  ["03-team-harnesses/index.md", "Claude Code 미니앱 제작 Playbook"],
+  ["04-build-day/index.md", "5개 팀별 샘플 미니앱"],
+  ["05-evaluation/index.md", "팀당 10분 발표"]
+]) {
+  const body = fs.readFileSync(path.join(root, file), "utf8");
+  if (!body.includes(phrase)) fail(`${file} missing current miniapp flow: ${phrase}`);
 }
 
 const forbiddenFileExtensions = allFiles.filter((file) => /\.(pdf|png|jpe?g|heic)$/i.test(file));
@@ -139,6 +185,7 @@ notes.push(`pages=${requiredPages.length}`);
 notes.push(`team_pages=${teamPages.length}`);
 notes.push(`starter_files=${allFiles.filter((f) => f.includes(`${path.sep}starter-kits${path.sep}`)).length}`);
 notes.push(`text_files=${textFiles.length}`);
+notes.push(`miniapp_prompts=${(commonLab.match(/^## \d+\. Prompt /gm) ?? []).length}`);
 
 if (failures.length) {
   console.error("VALIDATION FAIL");
