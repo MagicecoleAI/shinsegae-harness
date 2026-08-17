@@ -230,7 +230,8 @@ PASS·PARTIAL·FAIL·BLOCKED로 기록해주세요.
 
 ## 참고할 Harness 100 패턴
 
-- `53-financial-modeler`: 수익·비용·시나리오·Reviewer의 의존관계
-- `32-data-analysis`: 입력 정리·분석·보고 순서
+- [`53-financial-modeler`](https://github.com/revfactory/harness-100/tree/main/ko/53-financial-modeler): 수익·비용·시나리오·Reviewer의 의존관계
+- [`32-data-analysis`](https://github.com/revfactory/harness-100/tree/main/ko/32-data-analysis): 입력 정리·분석·보고 순서
+- [Harness 100 전체 패턴 목록](https://github.com/revfactory/harness-100/blob/main/README_ko.md)
 
 이 페이지의 Starter는 위 구조를 참고했지만, 예상손익 입력·안전·테스트 기준은 이 과정에 맞게 새로 작성했습니다.
